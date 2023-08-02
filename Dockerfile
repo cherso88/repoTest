@@ -5,8 +5,8 @@ WORKDIR /app
 
 
 # Copia el archivo JAR (o WAR) de la aplicación al contenedor en el directorio de trabajo
-COPY target/demo-0.0.1-SNAPSHOT.jar app.jar
 RUN mvnw install -DskipTests
+COPY target/demo-0.0.1-SNAPSHOT.jar app.jar
 
 # Comando para ejecutar la aplicación Spring Boot
 CMD ["java", "-jar", "app.jar"]
