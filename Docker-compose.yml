@@ -1,0 +1,7 @@
+version: '3.9'
+services:
+  mi-aplicacion:
+    build:
+      context: https://github.com/cherso88/repoTest.git
+    ports:
+      - "8087:8080"
